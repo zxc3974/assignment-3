@@ -10,15 +10,23 @@
     "dev": "tsx watch src/server.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/src/server.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
-"dependencies": {
-  "express": "^5.2.1"
-},
-"devDependencies": {
-  "@types/express": "^5.0.6",
-  "@types/node": "^26.6.4",
-  "tsx": "^4.23.15",
-  "typescript": "^7.0.2"
-}
+  "dependencies": {
+    "express": "^5.2.1",
+    "firebase-admin": "^14.5.1",
+    "joi": "^18.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/joi": "^17.2.2",
+    "@types/node": "^26.6.4",
+    "jest": "^30.5.2",
+    "ts-jest": "^29.4.15",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
 }
